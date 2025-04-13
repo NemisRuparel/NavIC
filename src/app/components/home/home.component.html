@@ -1,0 +1,65 @@
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content" @fadeIn>
+      <h1 class="hero-title">NavIC: India’s Skyward Precision</h1>
+      <p class="hero-subtitle">Discover the power of India’s own navigation system, connecting a billion dreams.</p>
+      <div class="hero-cta">
+        <a routerLink="/features" class="btn btn-primary">Explore Now</a>
+        <a routerLink="/contact" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="overview section">
+  <div class="container">
+    <h2 class="section-title">Why NavIC?</h2>
+    <div class="overview-grid">
+      <div class="overview-card" @zoomIn>
+        <h3>Indigenous Innovation</h3>
+        <p>Built by ISRO to reduce reliance on foreign navigation systems.</p>
+      </div>
+      <div class="overview-card" @zoomIn>
+        <h3>Wide Applications</h3>
+        <p>From agriculture to defense, NavIC powers diverse industries.</p>
+      </div>
+      <div class="overview-card" @zoomIn>
+        <h3>Robust Coverage</h3>
+        <p>Spans India and 1500 km beyond with unmatched reliability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="applications section" style="background: #F9FAFB;">
+  <div class="container">
+    <h2 class="section-title">Transforming Industries</h2>
+    <div class="app-carousel">
+      <div *ngFor="let app of applications" class="overview-card" @zoomIn>
+        <h3>{{ app.title }}</h3>
+        <p>{{ app.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials section">
+  <div class="container">
+    <h2 class="section-title">Voices of Impact</h2>
+    <div class="testimonial-grid">
+      <div *ngFor="let testimonial of testimonials" class="testimonial-card" @zoomIn>
+        <p class="quote">“{{ testimonial.quote }}”</p>
+        <p class="author">{{ testimonial.author }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta section" style="background: #111827; color: #FFFFFF;">
+  <div class="container">
+    <h2 class="section-title" style="color: #FFFFFF;">Join the NavIC Journey</h2>
+    <p class="cta-text">Experience India’s navigation revolution firsthand.</p>
+    <a routerLink="/contact" class="btn btn-primary">Get Started</a>
+  </div>
+</section>

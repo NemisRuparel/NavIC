@@ -1,0 +1,23 @@
+<section class="about section">
+  <div class="container">
+    <h2 class="section-title">{{ aboutInfo?.title }}</h2>
+    <div class="about-hero">
+      <div class="about-text" @fadeIn>
+        <p>{{ aboutInfo?.content }}</p>
+        <p>NavIC’s technology integrates with smartphones, vehicles, and IoT devices, driving India’s digital transformation.</p>
+      </div>
+      <div class="about-visual" @zoomIn>
+        <img src="https://img.freepik.com/premium-photo/8k-india-map-high-resolution-satellite-view-with-no-border-widescreen-4k-resolution_48799-3200.jpg" alt="NavIC Technology" />
+      </div>
+    </div>
+    <div class="milestones">
+      <h3 class="milestone-title">Our Journey</h3>
+      <div class="milestone-timeline">
+        <div *ngFor="let milestone of milestones" class="milestone-card" @fadeIn>
+          <span class="milestone-year">{{ milestone.year }}</span>
+          <p>{{ milestone.event }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

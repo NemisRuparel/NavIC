@@ -1,0 +1,54 @@
+<section class="contact section">
+    <div class="container">
+      <h2 class="section-title">Connect with NavIC</h2>
+      <div class="contact-grid">
+        <div class="contact-form" @fadeIn>
+          <h3>Drop Us a Line</h3>
+          <form (ngSubmit)="submitForm()">
+            <div class="form-group">
+              <input
+                type="text"
+                [(ngModel)]="contactForm.name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                [(ngModel)]="contactForm.email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                [(ngModel)]="contactForm.message"
+                name="message"
+                placeholder="Your Message"
+                required
+                rows="6"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-details" @fadeIn>
+          <h3>Our Coordinates</h3>
+          <div class="detail-card">
+            <i class="fas fa-phone"></i>
+            <p>+91-80-1234-5678</p>
+          </div>
+          <div class="detail-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>ISRO Headquarters, Bengaluru, Karnataka, India</p>
+          </div>
+          <div class="map">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE80CtVYCNeSsJMH5ca9rQ0Qj_GeHcrdI6xA&s" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

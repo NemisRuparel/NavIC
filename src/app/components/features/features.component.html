@@ -1,0 +1,12 @@
+<section class="features section">
+  <div class="container">
+    <h2 class="section-title">What Makes NavIC Unique</h2>
+    <div class="feature-grid">
+      <div *ngFor="let feature of features; let i = index" class="feature-card" @fadeIn>
+        <div class="feature-icon" [style.animation-delay]="i * 0.2 + 's'">{{ feature.icon }}</div>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<header class="header" [class.scrolled]="isScrolled">
+  <div class="container">
+    <a routerLink="/" class="logo">
+      <span>NavIC</span>
+    </a>
+    <button class="mobile-toggle" (click)="toggleMobileMenu()" aria-label="Toggle menu">
+      <span class="hamburger" [class.open]="isMobileMenuOpen"></span>
+    </button>
+    <nav class="nav" [class.active]="isMobileMenuOpen">
+      <ul>
+        <li *ngFor="let link of navLinks">
+          <a [routerLink]="link.path" routerLinkActive="active" (click)="isMobileMenuOpen = false">
+            {{ link.label }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

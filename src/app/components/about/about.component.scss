@@ -1,0 +1,90 @@
+.about-hero {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: #4B5563;
+  margin-bottom: 1.8rem;
+}
+
+.about-visual {
+  flex: 1;
+}
+
+.about-visual img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+
+.about-visual img:hover {
+  transform: translateY(-10px);
+}
+
+.milestones {
+  text-align: center;
+}
+
+.milestone-title {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 3rem;
+}
+
+.milestone-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.milestone-card {
+  background: #F9FAFB;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 300px;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.milestone-card:hover {
+  transform: scale(1.05);
+}
+
+.milestone-year {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #6B7280;
+  margin-bottom: 1rem;
+}
+
+.milestone-card p {
+  font-size: 1.1rem;
+  color: #4B5563;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column;
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
+  }
+
+  .milestone-card {
+    width: 100%;
+  }
+}
