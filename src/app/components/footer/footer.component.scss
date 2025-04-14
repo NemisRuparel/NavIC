@@ -19,7 +19,7 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 4rem;
   position: relative;
   z-index: 1;
@@ -42,6 +42,7 @@
 .social-links {
   display: flex;
   gap: 1.8rem;
+  margin-bottom: 2rem;
 }
 
 .social-links a {
@@ -54,6 +55,7 @@
   color: #FFFFFF;
   transform: translateY(-5px);
 }
+
 
 .footer-nav h4,
 .footer-contact h4 {
@@ -107,6 +109,11 @@
   .footer-brand {
     grid-column: span 2;
   }
+
+  .store-links {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -116,11 +123,17 @@
   }
 
   .social-links,
-  .footer-nav ul {
+  .footer-nav ul,
+  .store-links {
     justify-content: center;
   }
 
   .footer-nav a:hover {
     padding-left: 0;
+  }
+
+  .store-links {
+    flex-direction: column;
+    align-items: center;
   }
 }

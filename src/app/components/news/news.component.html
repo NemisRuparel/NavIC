@@ -1,0 +1,16 @@
+<section class="news section">
+    <div class="container">
+      <h2 class="section-title">Latest NavIC Updates</h2>
+      <div class="news-grid">
+        <div *ngFor="let news of newsItems; let i = index" class="news-card" @fadeIn [style.animation-delay]="i * 0.2 + 's'">
+          <img [src]="news.image" [alt]="news.title" class="news-image" />
+          <div class="news-content">
+            <span class="news-date">{{ news.date }}</span>
+            <h3>{{ news.title }}</h3>
+            <p>{{ news.excerpt }}</p>
+            <a href="https://www.isro.gov.in/SatelliteNavigationServices.html" class="news-link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

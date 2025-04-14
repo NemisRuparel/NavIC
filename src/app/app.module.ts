@@ -9,6 +9,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { TechnologyComponent } from './components/technology/technology.component';
+import { ApplicationsComponent } from './components/applications/applications.component';
+import { NewsComponent } from './components/news/news.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -19,7 +22,10 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutComponent,
     FeaturesComponent,
-    ContactComponent
+    ContactComponent,
+    TechnologyComponent,
+    ApplicationsComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<section class="applications section">
+    <div class="container">
+      <h2 class="section-title">NavIC in Action</h2>
+      <div class="app-grid">
+        <div *ngFor="let app of applications; let i = index" class="app-card" @fadeIn [style.animation-delay]="i * 0.2 + 's'">
+          <img [src]="app.image" [alt]="app.title" class="app-image" />
+          <div class="app-content">
+            <h3>{{ app.title }}</h3>
+            <p>{{ app.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

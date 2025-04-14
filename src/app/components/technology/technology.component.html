@@ -1,0 +1,19 @@
+<section class="technology section">
+    <div class="container">
+      <h2 class="section-title">The Technology Behind NavIC</h2>
+      <div class="tech-hero" @zoomIn>
+        <img src="https://img.freepik.com/free-vector/abstract-realistic-technology-particle-background_23-2148433468.jpg?semt=ais_hybrid&w=740" alt="NavIC Satellite Network" class="tech-image" />
+        <div class="tech-overlay">
+          <h3>Powering India’s Navigation</h3>
+          <p>NavIC’s advanced satellite system delivers precision and reliability across diverse applications.</p>
+        </div>
+      </div>
+      <div class="tech-grid">
+        <div *ngFor="let tech of techInfo" class="tech-card" @fadeIn>
+          <span class="tech-icon">{{ tech.icon }}</span>
+          <h3>{{ tech.title }}</h3>
+          <p>{{ tech.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>

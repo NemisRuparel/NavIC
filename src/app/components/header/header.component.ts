@@ -10,6 +10,9 @@ export class HeaderComponent {
     { path: '', label: 'Home' },
     { path: 'about', label: 'About' },
     { path: 'features', label: 'Features' },
+    { path: 'technology', label: 'Technology' },
+    { path: 'applications', label: 'Applications' },
+    { path: 'news', label: 'News' },
     { path: 'contact', label: 'Contact' }
   ];
   isMobileMenuOpen = false;

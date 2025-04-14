@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { NavicService } from '../../services/navic.service';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss'],
+  selector: 'app-technology',
+  templateUrl: './technology.component.html',
+  styleUrls: ['./technology.component.scss'],
   animations: [
     trigger('fadeIn', [
       transition(':enter', [
@@ -20,4 +21,12 @@ import { trigger, transition, style, animate } from '@angular/animations';
     ])
   ]
 })
-export class FooterComponent {}
+export class TechnologyComponent implements OnInit {
+  techInfo: any[] = [];
+
+  constructor(private navicService: NavicService) {}
+
+  ngOnInit() {
+    this.techInfo = this.navicService.getTechnologyInfo();
+  }
+}

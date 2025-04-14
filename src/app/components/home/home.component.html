@@ -35,12 +35,14 @@
 <section class="applications section" style="background: #F9FAFB;">
   <div class="container">
     <h2 class="section-title">Transforming Industries</h2>
-    <div class="app-carousel">
-      <div *ngFor="let app of applications" class="overview-card" @zoomIn>
+    <div class="overview-grid">
+
+      <div *ngFor="let app of applications" class="overview-card" @zoomIn>  
         <h3>{{ app.title }}</h3>
         <p>{{ app.description }}</p>
       </div>
     </div>
+    
   </div>
 </section>
 

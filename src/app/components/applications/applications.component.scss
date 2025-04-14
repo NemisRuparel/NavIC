@@ -1,0 +1,63 @@
+.applications {
+    background: #F9FAFB;
+  }
+  
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 3rem;
+  }
+  
+  .app-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s, box-shadow 0.4s;
+  }
+  
+  .app-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .app-image {
+    width: 100%;
+    height: 300px;
+    // object-fit: fill;
+    transition: transform 0.5s;
+  }
+  
+  .app-card:hover .app-image {
+    transform: scale(1.1);
+  }
+  
+  .app-content {
+    padding: 2.5rem;
+  }
+  
+  .app-content h3 {
+    font-size: 1.9rem;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+  
+  .app-content p {
+    font-size: 1.2rem;
+    color: #4B5563;
+    line-height: 1.7;
+  }
+  
+  @media (max-width: 768px) {
+    .app-card {
+      border-radius: 15px;
+    }
+  
+    .app-content {
+      padding: 2rem;
+    }
+  
+    .app-content h3 {
+      font-size: 1.7rem;
+    }
+  }
