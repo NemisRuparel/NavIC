@@ -4,7 +4,7 @@
       <div class="contact-grid">
         <div class="contact-form" @fadeIn>
           <h3>Drop Us a Line</h3>
-          <form (ngSubmit)="submitForm()">
+          <!-- <form (ngSubmit)="submitForm()">
             <div class="form-group">
               <input
                 type="text"
@@ -33,7 +33,28 @@
               ></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
+          </form> -->
+          <form action="" #myForm="ngForm" (ngSubmit)="OnSubmit(myForm)">
+            <div class="container">
+              <div class="form-group">
+                <input type="text" name="nm" #nm="ngModel" required ngModel placeholder="Enter Your Name">
+                <small *ngIf="nm.invalid && (nm.dirty || nm.touched)">Enter Valid Name</small>
+              </div>
+              
+              <div class="form-group">
+                <input type="email" name="email" required #email="ngModel" ngModel email placeholder="Enter Email">
+                <small *ngIf="email.invalid && (email.dirty || email.touched) ">valid email is required</small>
+    
+              </div>
+
+              <div class="form-group">
+                <textarea type="text" name="sub" #sub="ngModel" required ngModel placeholder="Enter Message" rows="4"> </textarea>
+                <small *ngIf="sub.invalid && (sub.dirty || sub.touched)">Please Enter Some Message</small>
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+        </form>
         </div>
         <div class="contact-details" @fadeIn>
           <h3>Our Coordinates</h3>

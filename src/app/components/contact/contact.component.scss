@@ -1,3 +1,8 @@
+input:focus.ng-invalid.ng-untouched{border: 2px solid red;}
+input.ng-invalid.ng-touched{border: 2px solid red;}
+
+input:focus.ng-valid{border:2px solid green;}
+input.valid{border:2px solid green;}
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -98,3 +103,8 @@
       font-size: 1.8rem;
     }
   }
+  small{
+    color: red;
+    // margin-left: 40px;
+    font-weight: 600;
+}

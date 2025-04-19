@@ -53,15 +53,6 @@ export class NavicService {
     ];
   }
 
-  getQuickFacts() {
-    return [
-      { label: 'Satellites', value: '7' },
-      { label: 'Launched', value: '2018' },
-      { label: 'Coverage', value: '1500 km' },
-      { label: 'Accuracy', value: '<10m' }
-    ];
-  }
-
   getApplications() {
     return [
       {

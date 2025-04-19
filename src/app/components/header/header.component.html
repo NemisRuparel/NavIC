@@ -9,10 +9,15 @@
     <nav class="nav" [class.active]="isMobileMenuOpen">
       <ul>
         <li *ngFor="let link of navLinks">
-          <a [routerLink]="link.path" routerLinkActive="active" (click)="isMobileMenuOpen = false">
+          <a 
+            [routerLink]="link.path" 
+            routerLinkActive="active" 
+            [routerLinkActiveOptions]="{ exact: true }" 
+            (click)="isMobileMenuOpen = false">
             {{ link.label }}
           </a>
         </li>
+        
       </ul>
     </nav>
   </div>

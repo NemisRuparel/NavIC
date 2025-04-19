@@ -25,4 +25,7 @@ export class ContactComponent {
     console.log('Form submitted:', this.contactForm);
     this.contactForm = { name: '', email: '', message: '' };
   }
+  OnSubmit(value : any){
+    console.log(value);
+  }
 }

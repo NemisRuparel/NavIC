@@ -22,14 +22,12 @@ import { NavicService } from '../../services/navic.service';
   ]
 })
 export class HomeComponent implements OnInit {
-  quickFacts: any[] = [];
   testimonials: any[] = [];
   applications: any[] = [];
 
   constructor(private navicService: NavicService) {}
 
   ngOnInit() {
-    this.quickFacts = this.navicService.getQuickFacts();
     this.testimonials = this.navicService.getTestimonials();
     this.applications = this.navicService.getApplications();
   }
